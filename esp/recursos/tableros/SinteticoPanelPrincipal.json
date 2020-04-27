@@ -3,9 +3,14 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.191.101.20200414-115902"
+    "clusterVersion": {
+      "major": 0,
+      "minor": 0,
+      "revision": 0,
+      "sourceRevision": "",
+      "timestamp": ""
+    }
   },
-  "id": "7241ede0-1c57-407d-935b-1e5d1971dd65",
   "dashboardMetadata": {
     "name": "⌘Sintetico - Panel Principal",
     "shared": false,
