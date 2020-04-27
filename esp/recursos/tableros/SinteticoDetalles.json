@@ -13,11 +13,10 @@
   },
   "dashboardMetadata": {
     "name": "⌘Sintetico - Detalles",
-    "shared": false,
-    "owner": "cespinofue@gmail.com",
+    "shared": true,
     "sharingDetails": {
       "linkShared": true,
-      "published": false
+      "published": true
     },
     "dashboardFilter": {
       "timeframe": "",
