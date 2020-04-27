@@ -3,9 +3,14 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.191.101.20200414-115902"
+    "clusterVersion": {
+      "major": 0,
+      "minor": 0,
+      "revision": 0,
+      "sourceRevision": "",
+      "timestamp": ""
+    }
   },
-  "id": "1ac0a1aa-77db-401d-8d04-85b810b82e6a",
   "dashboardMetadata": {
     "name": "⌘Sintetico - Detalles",
     "shared": false,
