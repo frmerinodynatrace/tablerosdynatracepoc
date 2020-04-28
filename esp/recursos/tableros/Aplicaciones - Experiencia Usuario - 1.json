@@ -1,0 +1,403 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      3
+    ],
+    "clusterVersion": "1.191.101.20200414-115902"
+  },
+  "id": "bb101dba-09e0-410c-8604-b0d5ee90b064",
+  "dashboardMetadata": {
+    "name": "♨︎ Aplicaciones - Experiencia Usuario 1",
+    "shared": false,
+    "owner": "frmerino@gmail.com",
+    "sharingDetails": {
+      "linkShared": true,
+      "published": false
+    },
+    "dashboardFilter": {
+      "timeframe": "",
+      "managementZone": null
+    }
+  },
+  "tiles": [
+    {
+      "name": "Satisfacción del viaje del usuario",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 0,
+        "width": 1976,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Características del cliente",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 2052,
+        "width": 1178,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "World map",
+      "tileType": "APPLICATION_WORLDMAP",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 2052,
+        "width": 1178,
+        "height": 608
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "assignedEntities": [],
+      "metric": "APDEX"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 988,
+        "left": 2052,
+        "width": 1178,
+        "height": 380
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "ISP",
+      "query": "select isp, count(*) from usersession where isp is not null group by isp",
+      "type": "PIE_CHART"
+    },
+    {
+      "name": "Tendencias",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 1064,
+        "width": 342,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 0,
+        "width": 456,
+        "height": 646
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Satisfacción",
+      "query": "select DISTINCT useraction.apdexCategory as Categoria, count(*) as Total FROM usersession where useraction.apdexCategory <> \"UNKNOWN\" GROUP BY useraction.apdexCategory",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 456,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Sesiones Satisfechas",
+      "query": "SELECT DISTINCT count(userSessionId) as \"Sesiones\" FROM usersession WHERE useraction.apdexCategory = \"SATISFIED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "-2h",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 456,
+        "width": 380,
+        "height": 380
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Sesiones Satisfechas",
+      "query": "SELECT DISTINCT DATETIME(starttime, 'MM-dd', '1d') as Fecha, count(*) as \"Sesiones Satisfechas\" FROM usersession WHERE useraction.apdexCategory = \"SATISFIED\"",
+      "type": "COLUMN_CHART",
+      "visualizationConfig": {
+        "hasAxisBucketing": true
+      },
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 836,
+        "width": 380,
+        "height": 380
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Sesiones Tolerantes",
+      "query": "SELECT DISTINCT DATETIME(starttime, 'MM-dd', '1d') as Fecha, count(*) as \"Sesiones tolerantes\" FROM usersession WHERE useraction.apdexCategory = \"TOLERATING\"",
+      "type": "COLUMN_CHART",
+      "visualizationConfig": {
+        "hasAxisBucketing": true
+      },
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 836,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Sesiones Tolerantes",
+      "query": "SELECT DISTINCT count(userSessionId) as \"Sesiones\" FROM usersession WHERE useraction.apdexCategory = \"TOLERATING\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "-2h",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 1216,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Sesiones Frustradas",
+      "query": "SELECT DISTINCT count(userSessionId) as \"Sesiones\" FROM usersession WHERE useraction.apdexCategory = \"FRUSTRATED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "-2h",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 1596,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Usabilidad - Clics de ira por sesión",
+      "query": "select count (numberOfRageClicks) as NumeroClics from usersession",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "-2h",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 1216,
+        "width": 380,
+        "height": 380
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Sesiones Frustradas",
+      "query": "SELECT DISTINCT DATETIME(starttime, 'MM-dd', '1d') as Fecha, count(*) as \"Sesiones Frustradas\" FROM usersession WHERE useraction.apdexCategory = \"FRUSTRATED\"",
+      "type": "COLUMN_CHART",
+      "visualizationConfig": {
+        "hasAxisBucketing": true
+      },
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 1596,
+        "width": 380,
+        "height": 380
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Sesiones con Errores",
+      "query": "select DISTINCT DATETIME(starttime, 'MM-dd', '1d') as Fecha, count(*) as \"Sesiones con errores\" FROM usersession where useraction.errorCount = 0",
+      "type": "COLUMN_CHART",
+      "visualizationConfig": {
+        "hasAxisBucketing": true
+      },
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 760,
+        "left": 0,
+        "width": 1976,
+        "height": 646
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Funnel de satisfacción - Actual vs hace 1 semana",
+      "query": "SELECT FUNNEL (useraction.apdexCategory =\"SATISFIED\" as \"Satisfechos\", useraction.apdexCategory= \"TOLERATING\" as \"Tolerantes\", useraction.apdexCategory= \"FRUSTRATED\" as \"Frustrados\") FROM usersession",
+      "type": "FUNNEL",
+      "timeFrameShift": "-1w",
+      "limit": 50
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 1406,
+        "left": 0,
+        "width": 532,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## Otros paneles\n[✅ Detalles](#dashboard;id=1ac0a1aa-77db-401d-8d04-85b810b82e6a)\n\n[⇦ Regreso a Menu Principal](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000000)\n"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 2052,
+        "width": 608,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Top Estados/Provincias",
+      "query": "select top(region ,5) as 'Estados/Provincias', count(*) as '# Sesiones' from usersession where region is not null GROUP BY region",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 2660,
+        "width": 570,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Top Ciudades",
+      "query": "select top(city ,5) as 'Ciudades', count(*) as '# Sesiones' from usersession where city is not null GROUP BY city",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 1368,
+        "left": 2052,
+        "width": 608,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Tipo de Acceso",
+      "query": "select top(browserType, 6) as 'Top Navegadores', count(*) as '# Sesiones'  from usersession where browserType is not null GROUP BY browserType",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 1368,
+        "left": 2660,
+        "width": 570,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Top Navegadores",
+      "query": "select top(browserMajorVersion, 6) as 'Top Browsers', count(*) as '# Sessions'  from usersession where browserMajorVersion is not null GROUP BY browserMajorVersion",
+      "type": "PIE_CHART",
+      "limit": 50
+    }
+  ]
+}
