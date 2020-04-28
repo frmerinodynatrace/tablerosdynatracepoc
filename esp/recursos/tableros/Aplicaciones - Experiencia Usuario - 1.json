@@ -3,16 +3,20 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.191.101.20200414-115902"
+    "clusterVersion": {
+      "major": 0,
+      "minor": 0,
+      "revision": 0,
+      "sourceRevision": "",
+      "timestamp": ""
+    }
   },
-  "id": "bb101dba-09e0-410c-8604-b0d5ee90b064",
   "dashboardMetadata": {
     "name": "♨︎ Aplicaciones - Experiencia Usuario 1",
-    "shared": false,
-    "owner": "frmerino@gmail.com",
+    "shared": true,
     "sharingDetails": {
       "linkShared": true,
-      "published": false
+      "published": true
     },
     "dashboardFilter": {
       "timeframe": "",
