@@ -1,11 +1,22 @@
 [
     {
-	"filename":"SinteticoDetalles.json"
+	"filename":"Aplicaciones - Experiencia Usuario - 1.json"
     },
     {
-	"filename":"SinteticoPanelPrincipal.json"
+	"filename":"Aplicaciones - Visibilidad 1.json"
     },
     {
-	"filename":"Sintetico 3.json"
-    }
+	"filename":"Evaluacion de calidad 1.json"
+    },
+    {
+	"filename":"Seguridad 1.json"
+    },
+    {
+	"filename":"Sintetico 1.json"
+    },
+    {
+	"filename":"Sintetico 2.json"
+    }	
+	
+	
 ]
