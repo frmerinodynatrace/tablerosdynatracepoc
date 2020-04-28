@@ -3,13 +3,17 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.191.101.20200414-115902"
+    "clusterVersion": {
+      "major": 0,
+      "minor": 0,
+      "revision": 0,
+      "sourceRevision": "",
+      "timestamp": ""
+    }
   },
-  "id": "ab4f2b30-d2cc-4884-a976-a065cdd83f58",
   "dashboardMetadata": {
     "name": "⌘ Sintetico 1",
     "shared": true,
-    "owner": "frmerino@gmail.com",
     "sharingDetails": {
       "linkShared": true,
       "published": true
