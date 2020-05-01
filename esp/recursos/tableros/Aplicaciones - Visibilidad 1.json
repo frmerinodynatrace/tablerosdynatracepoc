@@ -13,10 +13,10 @@
   },
   "dashboardMetadata": {
     "name": "♨︎ Aplicaciones - Visibilidad 1",
-    "shared": true,
+    "shared": false,
     "sharingDetails": {
       "linkShared": true,
-      "published": true
+      "published": false
     },
     "dashboardFilter": {
       "timeframe": "",
