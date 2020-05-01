@@ -1,4 +1,4 @@
-{
+  {
   "metadata": {
     "configurationVersions": [
       3
@@ -13,10 +13,10 @@
   },
   "dashboardMetadata": {
     "name": "☠︎ Seguridad 1",
-    "shared": true,
+    "shared": false,
     "sharingDetails": {
       "linkShared": true,
-      "published": true
+      "published": false
     },
     "dashboardFilter": {
       "timeframe": "",
