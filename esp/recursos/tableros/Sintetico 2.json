@@ -13,10 +13,10 @@
   },
   "dashboardMetadata": {
     "name": "⌘ Sintetico 2",
-    "shared": true,
+    "shared": false,
     "sharingDetails": {
       "linkShared": true,
-      "published": true
+      "published": false
     },
     "dashboardFilter": {
       "timeframe": "",
