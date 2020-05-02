@@ -20,6 +20,20 @@
     {
 	"filename":"Portal Principal PoC Dynatrace.json"
     }
-		
+    {
+	"filename":"Infraestructura - CPU.json"
+    },
+    {
+	"filename":"Infraestructura - Disco.json"
+    },
+    {
+	"filename":"Infraestructura - Host.json"
+    },
+    {
+	"filename":"Infraestructura - Memoria.json"
+    },
+    {
+	"filename":"Infraestructura - Red.json"
+    }	
 	
 ]
